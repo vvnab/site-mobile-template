@@ -1,0 +1,84 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+%section {
+  padding: 1rem;
+  min-height: 10vh;
+}
+
+header {
+  @extend %section;
+  background-color: teal;
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 100vw;
+  .logo {
+    display: grid;
+    place-items: center start;
+    margin: 0;
+  }
+  menu {
+    color: whitesmoke;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: -0.5rem;
+    margin-top: 1rem;
+    li {
+      margin-left: 0.5rem;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      &:hover {
+        background-color: darken(teal, 5%)
+      }
+    }
+  }
+  #menu-bars {
+    display: none;
+    font-size: 2rem;
+  }
+}
+
+main {
+  @extend %section;
+  background-color: whitesmoke;
+}
+
+footer {
+  @extend %section;
+  background-color: black;
+}
+
+
+@media screen and (max-width: 800px) {
+  header {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr auto;
+    place-items: center center;
+    position: sticky;
+    top: 0;
+ 
+    menu {
+      display: none;
+    }
+    #menu-bars {
+      display: block;
+    }
+  }
+}

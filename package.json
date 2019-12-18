@@ -1,0 +1,10 @@
+{
+  "name": "site-mobile-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Виталий Набережный <naberezhniy@taxi21.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.23.7"
+  }
+}
